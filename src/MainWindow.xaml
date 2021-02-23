@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VirtualTixClock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="287" Width="800">
+    <Grid Background="Black">
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Fill="Red" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="10,90,0,0" VerticalAlignment="Top" Width="75" Fill="Red" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="10,170,0,0" VerticalAlignment="Top" Width="75" Fill="Red" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="106,10,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="106,90,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="106,170,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="186,10,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="186,90,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="186,170,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="266,10,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="266,90,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="266,170,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="538,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="538,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="538,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="618,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="618,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="618,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="698,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="698,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="698,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="362,10,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="362,90,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="362,170,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="442,10,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="442,90,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="75" Margin="442,170,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
 
     </Grid>
 </Window>
