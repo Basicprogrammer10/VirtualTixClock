@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
@@ -17,6 +18,9 @@ namespace VirtualTixClock
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            Topmost = true;
+            DispatcherTimer_Tick(new object(), new EventArgs());
+
             DispatcherTimer = new DispatcherTimer();
             DispatcherTimer.Tick += DispatcherTimer_Tick;
             DispatcherTimer.Interval = new TimeSpan(0, 0, 5);
@@ -33,49 +37,63 @@ namespace VirtualTixClock
 
             var Minute = int.Parse(Clock.GetTimeChar("mm", 0).ToString(), 0);
             var Minute2 = int.Parse(Clock.GetTimeChar("mm", 1).ToString(), 0);
-
             var Hour = int.Parse(Clock.GetTimeChar("HH", 0).ToString(), 0);
             var Hour2 = int.Parse(Clock.GetTimeChar("HH", 1).ToString(), 0);
 
-            clearTix(AllTxt);
+            ClearTix(AllTxt);
 
-            var usedRect = new List<Rectangle>();
-            for (var i = 0; i < Minute; i++)
-                RectSet(usedRect, MinTix2, 6);
+            var UsedRect = new List<Rectangle>();
+            for (var I = 0; I < Minute; I++)
+                RectSet(UsedRect, MinTix2, 6);
 
-            usedRect = new List<Rectangle>();
-            for (var i = 0; i < Minute2; i++)
-                RectSet(usedRect, MinTix1, 9);
+            UsedRect = new List<Rectangle>();
+            for (var I = 0; I < Minute2; I++)
+                RectSet(UsedRect, MinTix1, 9);
 
-            usedRect = new List<Rectangle>();
-            for (var i = 0; i < Hour; i++)
-                RectSet(usedRect, HorTix1, 3);
+            UsedRect = new List<Rectangle>();
+            for (var I = 0; I < Hour; I++)
+                RectSet(UsedRect, HorTix1, 3);
 
-            usedRect = new List<Rectangle>();
-            for (var i = 0; i < Hour2; i++)
-                RectSet(usedRect, HorTix2, 9);
+            UsedRect = new List<Rectangle>();
+            for (var I = 0; I < Hour2; I++)
+                RectSet(UsedRect, HorTix2, 9);
         }
 
-        private void RectSet(List<Rectangle> usedRect, List<Rectangle> MinTix, int max)
+        private static void RectSet(ICollection<Rectangle> usedRect, IReadOnlyList<Rectangle> minTix, int max)
         {
-            var Rnd = new Random();
+            while (true)
+            {
+                var Rnd = new Random();
 
-            var rect = MinTix[Rnd.Next(0, max)];
-            if (usedRect.Contains(rect))
-            {
-                RectSet(usedRect, MinTix, max);
-            }
-            else
-            {
-                rect.Visibility = Visibility.Visible;
-                usedRect.Add(rect);
+                var Rect = minTix[Rnd.Next(0, max)];
+                if (usedRect.Contains(Rect))
+                    continue;
+                Rect.Visibility = Visibility.Visible;
+                usedRect.Add(Rect);
+                break;
             }
         }
 
-        private void clearTix(List<Rectangle> index)
+        private static void ClearTix(IEnumerable<Rectangle> index)
         {
-            foreach (var rect in index)
-                rect.Visibility = Visibility.Hidden;
+            foreach (var Rect in index)
+                Rect.Visibility = Visibility.Hidden;
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                DragMove();
+        }
+
+        private void ClickExit(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void ClickOnTop(object sender, RoutedEventArgs e)
+        {
+            Topmost = !Topmost;
         }
     }
 }
