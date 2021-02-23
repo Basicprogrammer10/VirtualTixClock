@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VirtualTixClock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="287" Width="800">
+        Title="MainWindow" Height="287" Width="800" Loaded="Window_Loaded">
     <Grid Background="Black">
         <Rectangle HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Fill="Red" RadiusX="15" RadiusY="15"/>
         <Rectangle HorizontalAlignment="Left" Height="75" Margin="10,90,0,0" VerticalAlignment="Top" Width="75" Fill="Red" RadiusX="15" RadiusY="15"/>
@@ -19,21 +18,22 @@
         <Rectangle HorizontalAlignment="Left" Height="75" Margin="266,10,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
         <Rectangle HorizontalAlignment="Left" Height="75" Margin="266,90,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
         <Rectangle HorizontalAlignment="Left" Height="75" Margin="266,170,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="538,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="538,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="538,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="618,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="618,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="618,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="698,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="698,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="698,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="362,10,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="362,90,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="362,170,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="442,10,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="442,90,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="442,170,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle x:Name="D0" HorizontalAlignment="Left" Height="75" Margin="538,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D1" HorizontalAlignment="Left" Height="75" Margin="618,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D2" HorizontalAlignment="Left" Height="75" Margin="698,10,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D3" HorizontalAlignment="Left" Height="75" Margin="538,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D4" HorizontalAlignment="Left" Height="75" Margin="618,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D5" HorizontalAlignment="Left" Height="75" Margin="698,90,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D6" HorizontalAlignment="Left" Height="75" Margin="538,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D7" HorizontalAlignment="Left" Height="75" Margin="618,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="D8" HorizontalAlignment="Left" Height="75" Margin="698,170,0,0" VerticalAlignment="Top" Width="75" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Hidden"/>
+        <Rectangle x:Name="C0" HorizontalAlignment="Left" Height="75" Margin="362,10,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle x:Name="C1" HorizontalAlignment="Left" Height="75" Margin="442,10,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle x:Name="C2" HorizontalAlignment="Left" Height="75" Margin="362,90,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle x:Name="C3" HorizontalAlignment="Left" Height="75" Margin="442,90,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle x:Name="C4" HorizontalAlignment="Left" Height="75" Margin="362,170,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <Rectangle x:Name="C5" HorizontalAlignment="Left" Height="75" Margin="442,170,0,0" VerticalAlignment="Top" Width="75" Fill="Blue" RadiusX="15" RadiusY="15"/>
+        <TextBlock x:Name="Debug" HorizontalAlignment="Left" Height="15" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Foreground="White"><Run Text="DEBUG"/><LineBreak/><Run/></TextBlock>
 
     </Grid>
 </Window>
