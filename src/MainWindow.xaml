@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="255" Width="785" Loaded="Window_Loaded" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
+        Title="MainWindow" Height="255" Width="785" Loaded="Window_Loaded" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Icon="/Icon.png">
 
     <Window.ContextMenu>
         <ContextMenu>
