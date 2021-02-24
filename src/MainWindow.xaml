@@ -13,7 +13,7 @@
         </ContextMenu>
     </Window.ContextMenu>
 
-        <Grid Background="Black">
+    <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -44,6 +44,5 @@
         <Rectangle x:Name="C3" Height="75" Margin="442,0,0,0" VerticalAlignment="Center" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
         <Rectangle x:Name="C4" HorizontalAlignment="Left" Margin="362,170,0,0" Width="76" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" Height="75" VerticalAlignment="Top"/>
         <Rectangle x:Name="C5" Margin="442,170,0,10" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-
     </Grid>
 </Window>

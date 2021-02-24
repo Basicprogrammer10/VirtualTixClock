@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Shapes;
 using System.Windows.Threading;
+using Rectangle = System.Windows.Shapes.Rectangle;
 
 namespace VirtualTixClock
 {
