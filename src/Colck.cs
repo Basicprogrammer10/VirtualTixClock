@@ -2,7 +2,7 @@
 
 namespace VirtualTixClock
 {
-    class Clock
+    internal class Clock
     {
         public static char GetTimeChar(string timeType, int index)
         {

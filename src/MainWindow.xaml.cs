@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Shapes;
 using System.Windows.Threading;
-using Rectangle = System.Windows.Shapes.Rectangle;
 
 namespace VirtualTixClock
 {
     public partial class MainWindow
     {
         private DispatcherTimer _dispatcherTimer;
+        private List<Rectangle> _usedRect = new List<Rectangle>();
 
         public MainWindow()
         {
@@ -29,7 +30,11 @@ namespace VirtualTixClock
 
         private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
-            var allTxt = new List<Rectangle> {A0, A1, A2, B0, B1, B2, B3, B4, B5, B6, B7, B8, C0, C1, C2, C3, C4, C5, D0, D1, D2, D3, D4, D5, D6, D7, D8};
+            var allTxt = new List<Rectangle>
+            {
+                A0, A1, A2, B0, B1, B2, B3, B4, B5, B6, B7, B8, C0, C1, C2, C3, C4, C5, D0, D1, D2, D3, D4, D5, D6, D7,
+                D8
+            };
             var horTix1 = new List<Rectangle> {A0, A1, A2};
             var horTix2 = new List<Rectangle> {B0, B1, B2, B3, B4, B5, B6, B7, B8};
             var minTix1 = new List<Rectangle> {D0, D1, D2, D3, D4, D5, D6, D7, D8};
@@ -42,21 +47,21 @@ namespace VirtualTixClock
 
             ClearTix(allTxt);
 
-            var usedRect = new List<Rectangle>();
+            _usedRect = new List<Rectangle>();
             for (var I = 0; I < minute; I++)
-                RectSet(usedRect, minTix2, 6);
+                RectSet(_usedRect, minTix2, 6);
 
-            usedRect = new List<Rectangle>();
+            _usedRect = new List<Rectangle>();
             for (var I = 0; I < minute2; I++)
-                RectSet(usedRect, minTix1, 9);
+                RectSet(_usedRect, minTix1, 9);
 
-            usedRect = new List<Rectangle>();
+            _usedRect = new List<Rectangle>();
             for (var I = 0; I < hour; I++)
-                RectSet(usedRect, horTix1, 3);
+                RectSet(_usedRect, horTix1, 3);
 
-            usedRect = new List<Rectangle>();
+            _usedRect = new List<Rectangle>();
             for (var I = 0; I < hour2; I++)
-                RectSet(usedRect, horTix2, 9);
+                RectSet(_usedRect, horTix2, 9);
         }
 
         private static void RectSet(ICollection<Rectangle> usedRect, IReadOnlyList<Rectangle> minTix, int max)

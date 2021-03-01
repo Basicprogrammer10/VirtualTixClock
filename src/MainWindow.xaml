@@ -4,45 +4,70 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="255" Width="785" Loaded="Window_Loaded" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Icon="/Icon.png">
+        Title="MainWindow" Height="255" Width="785" Loaded="Window_Loaded" ResizeMode="NoResize"
+        AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Icon="/Icon.png">
 
     <Window.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="Exit" Click="ClickExit"/>
-            <MenuItem Header="Toggle OnTop" Click="ClickOnTop"/>
+            <MenuItem Header="Exit" Click="ClickExit" />
+            <MenuItem Header="Toggle OnTop" Click="ClickOnTop" />
         </ContextMenu>
     </Window.ContextMenu>
 
     <Grid Background="Black">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Rectangle x:Name="A0" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Fill="Red" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="A1" HorizontalAlignment="Left" Height="75" Margin="10,0,0,0" VerticalAlignment="Center" Width="75" Fill="Red" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="A2" HorizontalAlignment="Left" Height="75" Margin="10,170,0,0" VerticalAlignment="Top" Width="75" Fill="Red" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B0" HorizontalAlignment="Left" Height="75" Margin="106,10,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B3" HorizontalAlignment="Left" Height="75" Margin="106,0,0,0" VerticalAlignment="Center" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B6" HorizontalAlignment="Left" Height="75" Margin="106,170,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B1" HorizontalAlignment="Left" Height="75" Margin="186,10,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B4" HorizontalAlignment="Left" Height="75" Margin="186,0,0,0" VerticalAlignment="Center" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B7" HorizontalAlignment="Left" Height="75" Margin="186,170,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B2" HorizontalAlignment="Left" Height="75" Margin="266,10,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B5" HorizontalAlignment="Left" Height="75" Margin="266,0,0,0" VerticalAlignment="Center" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="B8" HorizontalAlignment="Left" Height="75" Margin="266,170,0,0" VerticalAlignment="Top" Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible"/>
-        <Rectangle x:Name="D0" Margin="538,10,0,170" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D1" Margin="618,10,0,170" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D2" Margin="698,10,0,170" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D3" Height="75" Margin="538,0,0,0" VerticalAlignment="Center" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D4" Height="75" Margin="618,0,0,0" VerticalAlignment="Center" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D5" Height="75" Margin="698,0,0,0" VerticalAlignment="Center" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D6" Margin="538,170,0,10" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D7" Margin="618,170,0,10" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="D8" Margin="698,170,0,10" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="C0" HorizontalAlignment="Left" Margin="362,10,0,0" Width="76" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" Height="75" VerticalAlignment="Top"/>
-        <Rectangle x:Name="C1" Margin="442,10,0,170" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="C2" HorizontalAlignment="Left" Margin="362,0,0,0" Width="76" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" Height="75" VerticalAlignment="Center"/>
-        <Rectangle x:Name="C3" Height="75" Margin="442,0,0,0" VerticalAlignment="Center" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
-        <Rectangle x:Name="C4" HorizontalAlignment="Left" Margin="362,170,0,0" Width="76" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" Height="75" VerticalAlignment="Top"/>
-        <Rectangle x:Name="C5" Margin="442,170,0,10" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75"/>
+        <Rectangle x:Name="A0" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Red" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="A1" HorizontalAlignment="Left" Height="75" Margin="10,0,0,0" VerticalAlignment="Center"
+                   Width="75" Fill="Red" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="A2" HorizontalAlignment="Left" Height="75" Margin="10,170,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Red" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B0" HorizontalAlignment="Left" Height="75" Margin="106,10,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B3" HorizontalAlignment="Left" Height="75" Margin="106,0,0,0" VerticalAlignment="Center"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B6" HorizontalAlignment="Left" Height="75" Margin="106,170,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B1" HorizontalAlignment="Left" Height="75" Margin="186,10,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B4" HorizontalAlignment="Left" Height="75" Margin="186,0,0,0" VerticalAlignment="Center"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B7" HorizontalAlignment="Left" Height="75" Margin="186,170,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B2" HorizontalAlignment="Left" Height="75" Margin="266,10,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B5" HorizontalAlignment="Left" Height="75" Margin="266,0,0,0" VerticalAlignment="Center"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="B8" HorizontalAlignment="Left" Height="75" Margin="266,170,0,0" VerticalAlignment="Top"
+                   Width="75" Fill="Lime" RadiusX="15" RadiusY="15" Visibility="Visible" />
+        <Rectangle x:Name="D0" Margin="538,10,0,170" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D1" Margin="618,10,0,170" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D2" Margin="698,10,0,170" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D3" Height="75" Margin="538,0,0,0" VerticalAlignment="Center" Fill="Yellow" RadiusX="15"
+                   RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D4" Height="75" Margin="618,0,0,0" VerticalAlignment="Center" Fill="Yellow" RadiusX="15"
+                   RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D5" Height="75" Margin="698,0,0,0" VerticalAlignment="Center" Fill="Yellow" RadiusX="15"
+                   RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D6" Margin="538,170,0,10" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D7" Margin="618,170,0,10" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="D8" Margin="698,170,0,10" Fill="Yellow" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="C0" HorizontalAlignment="Left" Margin="362,10,0,0" Width="76" Fill="Blue" RadiusX="15"
+                   RadiusY="15" Visibility="Visible" Height="75" VerticalAlignment="Top" />
+        <Rectangle x:Name="C1" Margin="442,10,0,170" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="C2" HorizontalAlignment="Left" Margin="362,0,0,0" Width="76" Fill="Blue" RadiusX="15"
+                   RadiusY="15" Visibility="Visible" Height="75" VerticalAlignment="Center" />
+        <Rectangle x:Name="C3" Height="75" Margin="442,0,0,0" VerticalAlignment="Center" Fill="Blue" RadiusX="15"
+                   RadiusY="15" Visibility="Visible" HorizontalAlignment="Left" Width="75" />
+        <Rectangle x:Name="C4" HorizontalAlignment="Left" Margin="362,170,0,0" Width="76" Fill="Blue" RadiusX="15"
+                   RadiusY="15" Visibility="Visible" Height="75" VerticalAlignment="Top" />
+        <Rectangle x:Name="C5" Margin="442,170,0,10" Fill="Blue" RadiusX="15" RadiusY="15" Visibility="Visible"
+                   HorizontalAlignment="Left" Width="75" />
     </Grid>
 </Window>
